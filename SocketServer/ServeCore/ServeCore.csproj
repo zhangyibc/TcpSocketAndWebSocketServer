@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IHandlerCenter.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="SocketType.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="SerializeUtil.cs" />
     <Compile Include="SocketModel.cs" />

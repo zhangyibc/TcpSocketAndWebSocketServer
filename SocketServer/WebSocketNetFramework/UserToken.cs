@@ -39,6 +39,11 @@ namespace WebSocketNetFramework
         public IHandlerCenter center;
         public ILogger logger;
 
+        public UserToken()
+        {
+            this.socketType = SocketTypes.WebSocket;
+        }
+
         public override void receive(byte[] buff)
         {
             //将消息写入缓存

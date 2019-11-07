@@ -27,12 +27,17 @@ namespace SocketServer
 
         public void ClientConnect(Token token)
         {
-            logger.Log("有客户端连接了");
+            logger.Log("有客户端连接了,连接方式:" + token.socketType.ToString());
         }
 
         public void MessageReceive(Token token, object message)
         {
-            logger.Log("有消息发过来了");
+            logger.Log("有消息发过来了,连接方式:" + token.socketType.ToString());
+            SocketModel model = message as SocketModel;
+            logger.Log(model);
+            
+            SocketModel msg = new SocketModel(3, 3, 3, null);
+            token.write(msg);
         }
     }
 }

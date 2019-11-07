@@ -44,6 +44,7 @@ namespace TcpSocketNetFramework
 
         public UserToken()
         {
+            this.socketType = SocketTypes.TcpSocket;
             receiveSAEA = new SocketAsyncEventArgs();
             sendSAEA = new SocketAsyncEventArgs();
             receiveSAEA.UserToken = this;

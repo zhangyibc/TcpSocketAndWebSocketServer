@@ -26,6 +26,7 @@ namespace ServeCore
         public byte[] message { get; set; }
 
         public SocketModel() { }
+
         public SocketModel(byte t, int a, int c, byte[] o)
         {
             this.type = t;
@@ -38,6 +39,11 @@ namespace ServeCore
         {
             object obj = SerializeUtil.decode(this.message);
             return (T)obj;
+        }
+
+        public override string ToString()
+        {
+            return "type:" + type + " area:" + area + " command:" + command;
         }
     }
 }

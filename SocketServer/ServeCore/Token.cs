@@ -8,6 +8,8 @@ namespace ServeCore
 {
     public abstract class Token
     {
+        public SocketTypes socketType;
+
         /// <summary>
         /// 发送网络消息
         /// </summary>
